@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <html>
 <head>
@@ -67,7 +68,7 @@
 
 	<div id="map-canvas"></div>
 
-	<h1>List of ING ATMs in : ${city}</h1>
+	<h1><c:out value="${fn:length(addresses)}"/> ING ATMs in : ${city}</h1>
 	<ul>
 		<c:forEach items="${addresses}" var="address">
 			<li>${address.street} ${address.housenumber}
