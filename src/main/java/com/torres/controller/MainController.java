@@ -77,7 +77,7 @@ public class MainController {
 	}
 
 	@RequestMapping(value = {"/","atm", "atm/"}, method = RequestMethod.GET)
-	public String getDefaultMovie(ModelMap model) {
+	public String getDefault(ModelMap model) {
 
 		model.addAttribute("city", "No city selected");
 		return "list";
